@@ -1,0 +1,70 @@
+:root {
+  --measure: 60ch;
+}
+
+body {
+  margin: 1em auto;
+  max-width: var(--measure);
+  padding: 0 1.2em;
+  font: 1.2em/1.62 sans-serif;
+  color: #343f44;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #205631;
+}
+
+h2 {
+  font-weight: 600;
+  color: #ff4524;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.header-subtitle {
+  display: none;
+}
+
+.social-icons {
+  width: 20px;
+  height: 20px;
+}
+
+hr {
+  width: 0%;
+  min-width: 20%;
+  max-width: 100%;
+  margin: 1.5em auto;
+  border: none;
+  border-bottom: 2px solid #ffdb68;
+}
+
+a {
+  color: #ff5461;
+}
+
+footer {
+  font-size: 0.75rem;
+  color: grey;
+}
+
+@media print {
+  body {
+    max-width: none;
+  }
+}

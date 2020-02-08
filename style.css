@@ -1,43 +1,82 @@
+@import url('https://rsms.me/inter/inter.css');
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
 :root {
   --measure: 60ch;
+  --c-bg: hsl(0, 0%, 10%);
+  --c-text: hsl(0, 0%, 100%);
+  --c-text-alt: hsl(0, 0%, 90%);
+  --c-url: #711bff;
+  --c-detail: hsl(0, 0%, 20%);
+  --f-family: 'Inter', sans-serif;
+  --f-size: 15px;
+  --f-height: 24px;
+  --f-weight: 400;
+  --f-scale-s: 0.87;
+  --f-scale-m: 1.2;
+  --f-scale-l: 1.47;
+  --l-wide: 39rem;
+  --l-text: 25rem;
+  --a-speed: 150ms;
+  --a-ease: ease-out;
 }
 
 body {
   margin: 1em auto;
   max-width: var(--measure);
   padding: 0 1.2em;
-  font: 1.2em/1.62 sans-serif;
-  color: #343f44;
+  font: 1em/1.62 sans-serif;
+  font-family: var(--f-family);
+  font-size: var(--f-size);
+  background-color: var(--c-text);
+  color: var(--c-bg);
   display: flex;
   flex-direction: column;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
   word-wrap: break-word;
 }
+
+/* HEADER STYLES */
 
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.2rem;
+  font-weight: 400;
 }
 
-h1 {
-  font-weight: 900;
-  font-size: 2.5rem;
-  color: #205631;
+.intro-title {
+  font-size: calc(var(--f-size) * var(--f-scale-l));
+  line-height: 1.3rem;
+  padding-top: 2rem;
+  padding-bottom: 0.35rem;
+  letter-spacing: -0.01em;
 }
 
 h2 {
-  font-weight: 600;
-  color: #ff4524;
+  font-size: calc(var(--f-size) * var(--f-scale-m));
+  margin-top: 3rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .header-subtitle {
   display: none;
+}
+
+/* SOCIAL ICONS */
+
+.header-links {
+  display: block;
 }
 
 .social-icons {
@@ -55,7 +94,7 @@ hr {
 }
 
 a {
-  color: #ff5461;
+  color: var(--c-url);
 }
 
 footer {

@@ -1,109 +1,114 @@
 @import url('https://rsms.me/inter/inter.css');
-html {
-  font-family: 'Inter', sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
-}
 
 :root {
-  --measure: 60ch;
-  --c-bg: hsl(0, 0%, 10%);
-  --c-text: hsl(0, 0%, 100%);
-  --c-text-alt: hsl(0, 0%, 90%);
-  --c-url: #711bff;
-  --c-detail: hsl(0, 0%, 20%);
-  --f-family: 'Inter', sans-serif;
-  --f-size: 15px;
-  --f-height: 24px;
-  --f-weight: 400;
-  --f-scale-s: 0.87;
-  --f-scale-m: 1.2;
-  --f-scale-l: 1.47;
-  --l-wide: 39rem;
-  --l-text: 25rem;
-  --a-speed: 150ms;
-  --a-ease: ease-out;
+  --F1: 12px;
+  --F2: 14px;
+  --F3: 16px;
+  --F4: 18px;
+  --F5: 20px;
+  --F6: 24px;
+  --F7: 30px;
+  --F8: 36px;
+  --F9: 48px;
+  --F10: 60px;
+  --F11: 72px;
+  /* https://yeun.github.io/open-color/gray-color.html */
+  --gray0: #f8f9fa;
+  --gray1: #f1f3f5;
+  --gray2: #e9ecef;
+  --gray3: #dee2e6;
+  --gray4: #ced4da;
+  --gray5: #adb5bd;
+  --gray6: #868e96;
+  --gray7: #495057;
+  --gray8: #565a5e;
+  --gray9: #212529;
+  --purple9: #5f3dc4;
+  --purple0: #f3f0ff;
+}
+
+body *,
+html * {
+  max-width: 35em;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: var(--F3);
+  background-color: var(--gray0);
+  color: var(--gray9);
+  line-height: 26px;
 }
 
 body {
-  margin: 1em auto;
-  max-width: var(--measure);
-  padding: 0 1.2em;
-  font: 1em/1.62 sans-serif;
-  font-family: var(--f-family);
-  font-size: var(--f-size);
-  background-color: var(--c-text);
-  color: var(--c-bg);
-  display: flex;
-  flex-direction: column;
-
-  word-wrap: break-word;
+  padding: 15px;
+  margin: 0 auto;
 }
 
-/* HEADER STYLES */
+/* FONT STYLES */
 
-h1,
-h2,
-h3 {
-  line-height: 1.2rem;
-  font-weight: 400;
-}
-
-.intro-title {
-  font-size: calc(var(--f-size) * var(--f-scale-l));
-  line-height: 1.3rem;
-  padding-top: 2rem;
-  padding-bottom: 0.35rem;
-  letter-spacing: -0.01em;
+h1 {
+  font-size: var(--F6);
 }
 
 h2 {
-  font-size: calc(var(--f-size) * var(--f-scale-m));
-  margin-top: 3rem;
+  font-size: var(--F4);
 }
 
 h3 {
-  font-size: 0.9rem;
+  font-size: var(--F2);
+  text-transform: uppercase;
+  color: var(--gray6);
 }
 
-.header-subtitle {
+a {
+  color: var(--purple9);
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--purple0);
+}
+
+footer p,
+footer a {
+  font-size: var(--F1);
+  color: var(--gray5);
+  text-decoration: none;
+}
+
+#social-links a:hover,
+footer a:hover {
+  background-color: #fff;
+}
+
+p {
+  margin: var(--F5) 0;
+}
+
+/* WELCOME SECTION & LINKS */
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#welcome-subtitle {
   display: none;
 }
 
-/* SOCIAL ICONS */
-
-.header-links {
+#social-links {
+  margin-top: 5px;
   display: block;
 }
 
 .social-icons {
   width: 20px;
   height: 20px;
+  margin: 5px;
 }
 
-hr {
-  width: 0%;
-  min-width: 20%;
-  max-width: 100%;
-  margin: 1.5em auto;
-  border: none;
-  border-bottom: 2px solid #ffdb68;
-}
-
-a {
-  color: var(--c-url);
-}
-
-footer {
-  font-size: 0.75rem;
-  color: grey;
-}
-
-@media print {
-  body {
-    max-width: none;
-  }
+section {
+  margin-top: 50px;
 }

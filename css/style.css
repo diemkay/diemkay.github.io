@@ -1,43 +1,20 @@
 @import url('https://rsms.me/inter/inter.css');
-
-:root {
-  --F1: 12px;
-  --F2: 14px;
-  --F3: 16px;
-  --F4: 18px;
-  --F5: 20px;
-  --F6: 24px;
-  --F7: 30px;
-  --F8: 36px;
-  --F9: 48px;
-  --F10: 60px;
-  --F11: 72px;
-  /* https://yeun.github.io/open-color/gray-color.html */
-  --gray0: #f8f9fa;
-  --gray1: #f1f3f5;
-  --gray2: #e9ecef;
-  --gray3: #dee2e6;
-  --gray4: #ced4da;
-  --gray5: #adb5bd;
-  --gray6: #868e96;
-  --gray7: #495057;
-  --gray8: #565a5e;
-  --gray9: #212529;
-  --purple9: #5f3dc4;
-  --purple0: #f3f0ff;
-}
+@import './seasons.css';
+@import './open-color.css';
+@import './sizing.css';
 
 body *,
 html * {
-  max-width: 35em;
+  max-width: 60ch;
   word-wrap: break-word;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: var(--F3);
-  background-color: var(--gray0);
-  color: var(--gray9);
-  line-height: 26px;
+  background-color: var(--oc-gray-0);
+  color: var(--oc-gray-9);
+  line-height: 1.7rem;
+  word-break: break-word;
 }
 
 body {
@@ -52,34 +29,35 @@ h1 {
 }
 
 h2 {
-  font-size: var(--F4);
+  font-size: var(--F5);
 }
 
 h3 {
   font-size: var(--F2);
   text-transform: uppercase;
-  color: var(--gray6);
+  color: var(--oc-gray-6);
 }
 
+/* LINKS  */
 a {
-  color: var(--purple9);
+  color: var(--spring);
   text-decoration: none;
 }
 
 a:hover {
-  background-color: var(--purple0);
+  background-color: var(--spring-light);
 }
 
 footer p,
 footer a {
   font-size: var(--F1);
-  color: var(--gray5);
+  color: var(--oc-gray-5);
   text-decoration: none;
 }
 
 #social-links a:hover,
 footer a:hover {
-  background-color: #fff;
+  background-color: var(--oc-gray-0);
 }
 
 p {
